@@ -1,0 +1,37 @@
+[
+  {
+    "objectID": "posts/welcome/index.html",
+    "href": "posts/welcome/index.html",
+    "title": "Welcome To My Blog",
+    "section": "",
+    "text": "This is the first post in a Quarto blog. Welcome!\n\nSince this post doesn’t specify an explicit image, the first image in the post will be used in the listing page of posts."
+  },
+  {
+    "objectID": "posts/post-with-code/index.html",
+    "href": "posts/post-with-code/index.html",
+    "title": "Post With Code",
+    "section": "",
+    "text": "This is a post with executable code."
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this blog"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "dat303-blog",
+    "section": "",
+    "text": "Post With Code\n\n\n\n\n\n\nnews\n\n\ncode\n\n\nanalysis\n\n\n\n\n\n\n\n\n\nSep 2, 2024\n\n\nHarlow Malloc\n\n\n\n\n\n\n\n\n\n\n\n\nWelcome To My Blog\n\n\n\n\n\n\nnews\n\n\n\n\n\n\n\n\n\nAug 30, 2024\n\n\nTristan O’Malley\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "posts/solving-normal-equations/solving-normal-equations.html",
+    "href": "posts/solving-normal-equations/solving-normal-equations.html",
+    "title": "dat303-blog",
+    "section": "",
+    "text": "title: Solving the Normal Equations date: 2024-02-09 description: An investigation into solving the normal equations with Python categories: [Python]\nThe Normal Equations are given by:\n\\[\n\\hat{\\beta} = (X^{T}X)^{-1}X^{T}y\n\\]\n\nIn Python, we can use Numpy to solve the normal equations using np.linalg.lstsq. We will show that solving the normal equations directly and using np.linalg.lstsq return the same set of coefficient estimates. First, solving the normal equations directly:\n\nimport numpy as np\n\nrng = np.random.default_rng(516)\n\nx = np.linspace(0, 100, 250)\ny = 12 * rng.normal(loc=x, scale=45.68) + 4.25\nX = np.vstack([np.ones(len(x)), x]).T\n\nB0 = np.linalg.inv(X.T @ X) @ X.T @ y\n\nprint(f\"B0: {B0}\")\n\n\nB0: [-77.49004274  13.5783275 ]\n\n\n\n\nB1 = np.linalg.lstsq(X, y ,rcond=None)[0].tolist()\n\nprint(f\"B1: {B1}\")\n\nB1: [-77.4900427351216, 13.57832750194963]"
+  }
+]
