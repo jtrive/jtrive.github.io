@@ -2,9 +2,9 @@
   {
     "listing": "/index.html",
     "items": [
-      "/posts/solving-normal-equations/solving-normal-equations.html",
       "/posts/post-with-code/index.html",
-      "/posts/welcome/index.html"
+      "/posts/welcome/index.html",
+      "/posts/solving-normal-equations/solving-normal-equations.html"
     ]
   }
 ]
